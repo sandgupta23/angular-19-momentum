@@ -17,7 +17,8 @@ export class AppComponent {
     this.myForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      message: ['', Validators.required]
+      message: ['', Validators.required],
+      acceptTerms: [false, Validators.requiredTrue]  // Checkbox control
     });
   }
 

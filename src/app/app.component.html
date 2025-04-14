@@ -10,6 +10,11 @@
     <input slot="input" id="email" formControlName="email">
   </mdc-input>
 
+  <mdc-input label="Name" help-text-type="default" help-text="Helper text" placeholder="Placeholder" name="input" value="" id="" class="" style="" required-label="required" prefix-text="" data-aria-label="" leading-icon="" autocapitalize="off" autocomplete="" clear-aria-label="clear input">
+    <input slot="input" type="checkbox" formControlName="acceptTerms">
+  Accept Terms and Conditions
+  </mdc-input>
+
   <button type="submit" [disabled]="myForm.invalid">Submit</button>
 </form>
 
