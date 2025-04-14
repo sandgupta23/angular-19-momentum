@@ -1,1 +1,17 @@
 <mdc-button variant="primary" size="32" color="default" prefix-icon="" postfix-icon="" type="button" role="button" tabindex="0" aria-label="">Click Me</mdc-button>
+
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <mdc-input label="Name" help-text-type="default" help-text="Helper text" placeholder="Placeholder" name="input" value="" id="" class="" style="" required-label="required" prefix-text="" data-aria-label="" leading-icon="" autocapitalize="off" autocomplete="" clear-aria-label="clear input">
+    <input slot="input" id="name" formControlName="name">
+  </mdc-input>
+
+  <mdc-input label="Name" help-text-type="default" help-text="Helper text" placeholder="Placeholder" name="input" value="" id="" class="" style="" required-label="required" prefix-text="" data-aria-label="" leading-icon="" autocapitalize="off" autocomplete="" clear-aria-label="clear input">
+    <input slot="input" id="email" formControlName="email">
+  </mdc-input>
+
+  <button type="submit" [disabled]="myForm.invalid">Submit</button>
+</form>
+
+
+{{myForm.value | json}}
