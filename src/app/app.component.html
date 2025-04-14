@@ -1,7 +1,15 @@
 <mdc-button variant="primary" size="32" color="default" prefix-icon="" postfix-icon="" type="button" role="button" tabindex="0" aria-label="">Click Me</mdc-button>
 
+<mdc-icon iconSet="momentum-icons" 
+aria-label="This is the accessibility icon" 
+class="custom-classname" name="placeholder-regular" 
+size="2" style="margin: 0px;"></mdc-icon>
 
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+
+  <mdc-input formControlName="name" label="Name" help-text-type="default" help-text="Helper text" placeholder="Placeholder" name="input" value="" id="" class="" style="" required-label="required" prefix-text="" data-aria-label="" leading-icon="" autocapitalize="off" autocomplete="" clear-aria-label="clear input">
+  </mdc-input>
+
   <mdc-input label="Name" help-text-type="default" help-text="Helper text" placeholder="Placeholder" name="input" value="" id="" class="" style="" required-label="required" prefix-text="" data-aria-label="" leading-icon="" autocapitalize="off" autocomplete="" clear-aria-label="clear input">
     <input slot="input" id="name" formControlName="name">
   </mdc-input>
