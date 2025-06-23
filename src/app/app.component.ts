@@ -18,7 +18,8 @@ export class AppComponent {
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required],
-      acceptTerms: [false, Validators.requiredTrue]  // Checkbox control
+      acceptTerms: [false, Validators.requiredTrue],  // Checkbox control
+      radio: [true, Validators.requiredTrue]  // Checkbox radio
     });
   }
 

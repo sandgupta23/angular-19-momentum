@@ -7,21 +7,36 @@ size="2" style="margin: 0px;"></mdc-icon>
 
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
 
-  <mdc-input formControlName="name" label="Name" help-text-type="default" help-text="Helper text" placeholder="Placeholder" name="input" value="" id="" class="" style="" required-label="required" prefix-text="" data-aria-label="" leading-icon="" autocapitalize="off" autocomplete="" clear-aria-label="clear input">
+  <mdc-input ngDefaultControl formControlName="name" label="Name" help-text-type="default" help-text="Helper text" placeholder="Placeholder" name="input" value="" id="" class="" style="" required-label="required" prefix-text="" data-aria-label="" leading-icon="" autocapitalize="off" autocomplete="" clear-aria-label="clear input">
   </mdc-input>
 
   <mdc-input label="Name" help-text-type="default" help-text="Helper text" placeholder="Placeholder" name="input" value="" id="" class="" style="" required-label="required" prefix-text="" data-aria-label="" leading-icon="" autocapitalize="off" autocomplete="" clear-aria-label="clear input">
-    <input slot="input" id="name" formControlName="name">
+    <input slot="input" id="name" ngDefaultControl formControlName="name">
   </mdc-input>
 
-  <mdc-input label="Name" help-text-type="default" help-text="Helper text" placeholder="Placeholder" name="input" value="" id="" class="" style="" required-label="required" prefix-text="" data-aria-label="" leading-icon="" autocapitalize="off" autocomplete="" clear-aria-label="clear input">
-    <input slot="input" id="email" formControlName="email">
-  </mdc-input>
+  <mdc-textarea ngDefaultControl formControlName="email" label="Label" help-text-type="default" help-text="Help text" placeholder="Placeholder" name="textarea" value="" rows="1" cols="36" wrap="soft" class="" style="" required="" data-aria-label="" autocapitalize="off" autocomplete="off" validation-message="" toggletip-placement="" toggletip-text="" info-icon-aria-label=""></mdc-textarea>
 
-  <mdc-input label="Name" help-text-type="default" help-text="Helper text" placeholder="Placeholder" name="input" value="" id="" class="" style="" required-label="required" prefix-text="" data-aria-label="" leading-icon="" autocapitalize="off" autocomplete="" clear-aria-label="clear input">
-    <input slot="input" type="checkbox" formControlName="acceptTerms">
-  Accept Terms and Conditions
-  </mdc-input>
+
+  <div>
+    <mdc-select label="Headquarters location" ngDefaultControl formControlName="email" help-text-type="" help-text="Select Help Text" height="auto" data-aria-label="Select label" toggletip-text="" toggletip-placement="" info-icon-aria-label="" name="" placeholder="Select your headquarters location">
+      <mdc-option value="London">London, UK</mdc-option>
+      <mdc-option value="Los">Los Angeles, CA</mdc-option>
+      <mdc-option value="New">New York, NY</mdc-option>
+      <mdc-option value="Phoenix">Phoenix, AZ</mdc-option>
+      <mdc-option value="Seattle">Seattle, WA</mdc-option>
+    </mdc-select>
+  </div>
+
+  <div style="display: flex; flex-direction: column;">
+    RADIO
+    <mdc-radio  ngDefaultControl formControlName="radio"
+     value="false" label="Unselected"></mdc-radio>
+    <mdc-radio  ngDefaultControl formControlName="radio"
+     value="true" label="Selected" checked=""></mdc-radio>
+  </div>
+
+  <mdc-checkbox ngDefaultControl formControlName="acceptTerms" label="I agree to the terms" help-text="" name="" value="" class="" style="" id="" data-aria-label="Agree to all terms and conditions" info-icon-aria-label="" toggletip-text="" toggletip-placement=""></mdc-checkbox>
+
 
   <button type="submit" [disabled]="myForm.invalid">Submit</button>
 </form>
